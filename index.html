@@ -1,41 +1,433 @@
-<!DOCTYPE html>
-<html>
+from pathlib import Path
+
+html = r'''<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AXION Movement Tracker</title>
+
+<title>AXION Fitness Flexibility Master</title>
+
 <style>
-body{background:#0b0b0b;color:white;font-family:Arial;padding:20px;}
-h1{color:#00e676;}
-.card{background:#151515;padding:15px;border-radius:15px;margin-bottom:15px;}
-button{background:#00c853;color:white;border:none;padding:12px;border-radius:10px;width:100%;font-size:18px;}
-a{color:#64b5f6;}
+
+body{
+
+    background:#0d0d0d;
+
+    color:#f5f5f5;
+
+    font-family:Arial,sans-serif;
+
+    margin:0;
+
+    padding:20px;
+
+    line-height:1.5;
+
+}
+
+h1,h2,h3{
+
+    color:#00e676;
+
+}
+
+.card{
+
+    background:#171717;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:18px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+
+}
+
+button{
+
+    background:#00c853;
+
+    color:white;
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    width:100%;
+
+    font-size:16px;
+
+    margin-top:10px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:10px;
+
+}
+
+th,td{
+
+    border:1px solid #333;
+
+    padding:8px;
+
+}
+
+th{
+
+    background:#202020;
+
+    color:#00e676;
+
+}
+
+a{
+
+    color:#64b5f6;
+
+}
+
+textarea,input,select{
+
+    width:100%;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    border:none;
+
+    margin-top:8px;
+
+    background:#222;
+
+    color:white;
+
+}
+
+.pass{color:#00e676;}
+
+.review{color:#ffd54f;}
+
+.fail{color:#ef5350;}
+
 </style>
+
 </head>
+
 <body>
 
-<h1>AXION Human Movement Tracker</h1>
-<p>Visual-first tracker for run, walk, jump rope, jumping jacks, stretching, calisthenics, handstands, ground mobility, push, pull, legs, yoga, and fascia work.</p>
-
-<div class="card"><h2>🚶 Walk</h2><p>Recovery, circulation, base conditioning.</p><button>+ Add Walk</button></div>
-<div class="card"><h2>🏃 Run</h2><p>Cardio, stamina, rhythm, leg spring.</p><button>+ Add Run</button></div>
-<div class="card"><h2>🪢 Jump Rope</h2><p>Footwork, rhythm, coordination, elastic bounce.</p><button>+ Add Jump Rope</button></div>
-<div class="card"><h2>⭐ Jumping Jacks</h2><p>Warm-up, shoulder/hip rhythm, full-body pulse.</p><button>+ Add Jumping Jacks</button></div>
-<div class="card"><h2>🧘 Stretching</h2><p>Range, tissue length, decompression, cooldown.</p><button>+ Add Stretching</button></div>
-<div class="card"><h2>🤸 Calisthenics</h2><p>Bodyweight strength and control.</p><button>+ Add Calisthenics</button></div>
-<div class="card"><h2>🙌 Handstands</h2><p>Wrists, shoulders, core line, balance.</p><button>+ Add Handstands</button></div>
-<div class="card"><h2>🌍 Ground Mobility</h2><p>Floor transitions, hips, spine, joint control.</p><button>+ Add Ground Mobility</button></div>
-<div class="card"><h2>🌀 Mobility</h2><p>Controlled range, joint circles, flow quality.</p><button>+ Add Mobility</button></div>
-<div class="card"><h2>⬆️ Push</h2><p>Push-ups, dips, shoulder press patterns.</p><button>+ Add Push</button></div>
-<div class="card"><h2>⬇️ Pull</h2><p>Rows, pull-ups, scapular strength.</p><button>+ Add Pull</button></div>
+<h1>AXION Fitness Flexibility Master</h1>
 
 <div class="card">
-<h2>📺 Visual Video Library</h2>
-<p><a href="https://www.youtube.com/results?search_query=beginner+calisthenics+mobility+routine" target="_blank">Calisthenics + Mobility Videos</a></p>
-<p><a href="https://www.youtube.com/results?search_query=beginner+handstand+progression" target="_blank">Handstand Progression Videos</a></p>
-<p><a href="https://www.youtube.com/results?search_query=jump+rope+beginner+footwork" target="_blank">Jump Rope Beginner Videos</a></p>
-<p><a href="https://www.youtube.com/results?search_query=yoga+mobility+fascia+routine" target="_blank">Yoga + Fascia Mobility Videos</a></p>
+
+<h2>System Purpose</h2>
+
+<p>Source-based tracker for yoga anatomy study, static flexibility, stretching anatomy, handstand progression, L-sit support strength, planche foundation, hip opening, and ground mobility.</p>
+
+<ul>
+
+<li>Static Flexibility Master</li>
+
+<li>Stretching Anatomy</li>
+
+<li>15 Seconds Handstand</li>
+
+<li>Zero Gravity Handstand</li>
+
+<li>Planche Manual</li>
+
+<li>L-Sit Foundation</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Non-Negotiable Safety Rules</h2>
+
+<ul>
+
+<li>Stretch after a general warm-up.</li>
+
+<li>No bouncing.</li>
+
+<li>No joint pain.</li>
+
+<li>No breath holding.</li>
+
+<li>Static hold target: 10–30 seconds.</li>
+
+<li>Up to 3 rounds per stretch.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Daily Operating Flow</h2>
+
+<table>
+
+<tr><th>Phase</th><th>Action</th></tr>
+
+<tr><td>Warm</td><td>3–5 min walk, rope, joint circles</td></tr>
+
+<tr><td>Mobilize</td><td>Wrists, shoulders, spine, hips, ankles</td></tr>
+
+<tr><td>Stretch</td><td>10–30 second holds</td></tr>
+
+<tr><td>Skill</td><td>Handstand, L-sit, ground flow</td></tr>
+
+<tr><td>Log</td><td>Proof, pain, score, gate</td></tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Hip Opening / Lower Body</h2>
+
+<ul>
+
+<li>Seated feet together</li>
+
+<li>Modified hurdler</li>
+
+<li>Inside upper leg stretch</li>
+
+<li>Groin / butterfly stretch</li>
+
+<li>Hip flexor + twist</li>
+
+<li>Deep squat stretch</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Handstand Progression</h2>
+
+<table>
+
+<tr><th>Level</th><th>Work</th><th>Gate</th></tr>
+
+<tr><td>1</td><td>Wrist circles + palm rotations</td><td>Pain-free wrist prep</td></tr>
+
+<tr><td>2</td><td>Straight-arm plank + downward dog</td><td>3 × 20 sec stable</td></tr>
+
+<tr><td>3</td><td>Shoulder mobility</td><td>No shoulder pinch</td></tr>
+
+<tr><td>4</td><td>Wall handstand</td><td>3 × 15–30 sec</td></tr>
+
+<tr><td>5</td><td>Frog balance</td><td>Controlled breathing</td></tr>
+
+<tr><td>6</td><td>Bailing + kick-ups</td><td>Safe exits</td></tr>
+
+<tr><td>7</td><td>Free handstand</td><td>10–15 sec goal</td></tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>L-Sit Progression</h2>
+
+<table>
+
+<tr><th>Level</th><th>Drill</th><th>Gate</th></tr>
+
+<tr><td>1</td><td>Compression pulses</td><td>3 × 10 clean lifts</td></tr>
+
+<tr><td>2</td><td>Support hold</td><td>3 × 20 sec</td></tr>
+
+<tr><td>3</td><td>Tuck sit hold</td><td>5 × 5–10 sec</td></tr>
+
+<tr><td>4</td><td>One-leg L-sit</td><td>Controlled holds</td></tr>
+
+<tr><td>5</td><td>Alternating switches</td><td>No collapse</td></tr>
+
+<tr><td>6</td><td>Full L-sit</td><td>30–60 sec total</td></tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Ground Mobility Block</h2>
+
+<table>
+
+<tr><th>Movement</th><th>Sets</th><th>Pass Standard</th></tr>
+
+<tr><td>Deep squat hold</td><td>3 × 30 sec</td><td>Feet rooted</td></tr>
+
+<tr><td>90-90 hip switches</td><td>3 × 10</td><td>Controlled rotation</td></tr>
+
+<tr><td>Bear crawl</td><td>3 × 20 steps</td><td>Slow + stable</td></tr>
+
+<tr><td>Crab reach</td><td>3 × 5</td><td>No wrist pain</td></tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Video Example Library</h2>
+
+<ul>
+
+<li><a href="https://www.youtube.com/results?search_query=GMB+handstand+tutorial" target="_blank">Handstand Basics</a></li>
+
+<li><a href="https://www.youtube.com/results?search_query=GMB+L+sit+progression" target="_blank">L-Sit Progression</a></li>
+
+<li><a href="https://www.youtube.com/results?search_query=wrist+mobility+handstand" target="_blank">Wrist Mobility</a></li>
+
+<li><a href="https://www.youtube.com/results?search_query=deep+squat+mobility" target="_blank">Deep Squat Mobility</a></li>
+
+<li><a href="https://www.youtube.com/results?search_query=frog+stretch+mobility" target="_blank">Frog Stretch</a></li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>PASS / REVIEW / FAIL</h2>
+
+<p class="pass"><strong>PASS</strong> — clean, controlled, repeatable, pain-free.</p>
+
+<p class="review"><strong>REVIEW</strong> — correction needed.</p>
+
+<p class="fail"><strong>FAIL</strong> — sharp pain, unsafe form, dizziness.</p>
+
+</div>
+
+<div class="card">
+
+<h2>Daily Proof Log</h2>
+
+<label>Date</label>
+
+<input type="date">
+
+<label>Block</label>
+
+<select>
+
+<option>Static Flexibility</option>
+
+<option>Stretching Anatomy</option>
+
+<option>Yoga Anatomy</option>
+
+<option>Handstand Progression</option>
+
+<option>L-Sit Progression</option>
+
+<option>Planche Foundation</option>
+
+<option>Ground Mobility</option>
+
+<option>Pike Push-Up</option>
+
+<option>Mike Tyson Push-Up</option>
+
+<option>Fascia Recovery</option>
+
+</select>
+
+<label>Minutes</label>
+
+<input type="number">
+
+<label>Pain 0–10</label>
+
+<input type="number">
+
+<label>Score 0–100</label>
+
+<input type="number">
+
+<label>Gate</label>
+
+<select>
+
+<option>PASS</option>
+
+<option>REVIEW</option>
+
+<option>FAIL</option>
+
+</select>
+
+<label>Proof</label>
+
+<textarea rows="3"></textarea>
+
+<button>Save Log</button>
+
+<button>Export JSON</button>
+
+<button onclick="window.print()">Print / Save PDF</button>
+
+</div>
+
+<div class="card">
+
+<h2>7-Day Rotation</h2>
+
+<ul>
+
+<li>Day 1 — Wrists + handstand line</li>
+
+<li>Day 2 — Hips + static lower body</li>
+
+<li>Day 3 — L-sit compression + hamstrings</li>
+
+<li>Day 4 — Shoulders + wall handstand</li>
+
+<li>Day 5 — Ground mobility flow</li>
+
+<li>Day 6 — Planche prep + support strength</li>
+
+<li>Day 7 — Recovery + anatomy review</li>
+
+</ul>
+
 </div>
 
 </body>
+
 </html>
+
+'''
+
+path = Path("/mnt/data/AXION_Fitness_Flexibility_Master.html")
+
+path.write_text(html)
+
+print(f"Saved to {path}")
